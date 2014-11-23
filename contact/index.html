@@ -1,0 +1,18 @@
+{% capture content %}
+
+<div class="contact-form">
+	{% include 'includes/form' %}
+</div>
+
+<div class="contact">
+    <header>
+        <h2>Contact Me</h2>
+    </header>
+	{{ body }}
+</div>
+
+{% include 'includes/sidebar' %}
+
+{% endcapture %}
+
+{% include "layouts/default" %}

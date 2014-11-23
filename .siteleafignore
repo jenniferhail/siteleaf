@@ -1,0 +1,28 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.zip
+*.vi
+*~
+
+.DS_Store
+.git
+bower_components
+scripts/coffee/*.*
+config/*.*
+config.ru
+Gemfile
+Guardfile
+Gemfile.lock
+gulpfile.js
+package.json
+*.map
+
+#OS folders
+node_modules/**
+.sass-cache

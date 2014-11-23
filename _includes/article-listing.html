@@ -1,0 +1,23 @@
+<article class='article-listing{% if article == posts.first %} latest{% endif %}'>
+
+  <hgroup class='content-header'>
+    
+    <h2 class='content-title webfont'>
+      <a href='{{ article.url }}'>{{ article.title }}</a>
+    </h2>
+
+    <h3 class='content-subheader'>
+      <a class='content-date' href='{{ article.url }}'>{{ article.date | date: '%B %-d, %Y' }}</a>
+    </h3>
+
+  </hgroup>
+
+  <div class='content-body'>
+
+    {{ article.excerpt }}
+
+    <p><a class='more' href='{{ article.url }}'>Read&nbsp;more</a></p>
+
+  </div>
+
+</article>

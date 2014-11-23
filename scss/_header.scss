@@ -1,0 +1,45 @@
+/* Header */
+
+.primary-header {
+  text-align: center;
+  .logo {
+    text-align: left;
+    img {
+      max-width: 150px;
+      margin-bottom: 0;
+    }
+  }
+  .site-nav {
+    text-align: left;
+  }
+}
+.site-nav li {
+  list-style: none;
+  line-height: 1.2em;
+  display: inline-block;
+  margin-right: 2em;
+  a {
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    font-size: 0.8em;
+    color: #4d4d4d;
+    &:hover {
+      cursor: pointer;
+      opacity: $opacity;
+    }
+  }
+}
+
+.site-title {
+  letter-spacing: 0.1em;
+  text-align: center; 
+  font-size: 1.25em;
+  font-family: $secondary;
+  font-weight: 300;
+  line-height: 1.8em;
+  margin-bottom: 1em;
+  //letter-spacing: 0.025em;
+  color: $white;
+  -webkit-font-smoothing: antialiased;
+  font-style: italic;
+}

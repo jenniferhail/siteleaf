@@ -1,0 +1,37 @@
+{% capture content %}
+
+{% include 'includes/sidebar-blog' %}
+
+<div class="blog">
+
+  {{ body }}
+
+  {% for post in posts limit:20 %}
+
+    <article>
+
+      <div class="snapshot">
+        <a href="{{ post.url }}"><img src="{{ post.meta.snapshot }}" alt="{{ post.title }}" /></a>
+      </div>
+      <div class="post">
+        <header>
+          <a href="{{ post.url }}"><h2>{{post.title}}</h2></a>
+          <span class="post-date">{{post.date | date: "%B %-d, %Y"}}</span>
+        </header>
+
+        {{ post.excerpt }}
+
+        <footer>
+          <span class="read-more"><a href="{{ post.url }}">Read more</a></span>
+        </footer>
+      </div>
+
+    </article>
+
+  {% endfor %}
+
+</div>
+
+{% endcapture %}
+
+{% include "layouts/default" %}

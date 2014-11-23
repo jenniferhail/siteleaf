@@ -1,0 +1,30 @@
+<article class="article">
+
+{% if current.meta.layout == 'moodboard' %}
+	<div id="moodboard">
+		{% for asset in assets %}
+			{% if asset.type == 'image' %}
+				<div class="item">
+					<a href="{{ asset.meta.link }}"><img src="{{ asset.url }}" alt="{{ asset.meta.name }}" ></a>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+{% else %}
+	<div class="images">
+		<img src="{{ current.meta.snapshot }}" alt="{{ current.title }}" />
+	</div>
+{% endif %}
+
+<div class="post">
+	<header class="content-header">
+		<a href="{{ current.url }}"><h2>{{current.title}}</h2></a>
+		<span class="post-date">{{current.date | date: "%B %-d, %Y"}}</span>
+	</header>
+
+	<div class="content-body">
+		{{ current.body }}
+	</div>
+</div>
+
+</article>

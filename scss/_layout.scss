@@ -1,0 +1,130 @@
+/* Layout 
+================================ */
+
+body {
+  @include container(100%);
+}
+#page {
+  padding: 2em 0;
+}
+.primary-header {
+  z-index: 99999;
+  padding: 5em 0 1.5em;
+  width: 100%;
+  position: relative;
+  .site-nav {
+    padding: 1.15em 0;
+  }
+  .wrapper {
+    @extend %clearfix;
+    margin: 0 auto;
+  }
+}
+.container{
+  margin: 0 auto;
+  @include outer-container;
+}
+#main {
+  padding: 4em 0;
+  margin: 0 auto;
+  @extend %clearfix;  
+}
+#main .content {
+  width: span(10 of 10);
+  margin: 0 auto;  
+  @extend %clearfix;
+}
+.logo,
+.snapshot,
+.contact-form {
+  width: 45%;
+  @include span-columns(6);
+  float: left;
+}
+.site-nav,
+.biography,
+.blog .post,
+.blog-post,
+.contact {
+  width: 45%;
+  @include span-columns(6);
+  float: right;
+}
+.description {
+
+}
+.blog {
+  @extend %clearfix;
+}
+.sidebar {
+  //width: span(24%);
+  //float: right;
+  display: none;
+}
+.contact header {
+  margin-bottom: 2em;
+}
+
+/* Blog Layout */
+article {
+  @extend %clearfix;
+}
+.pagination {
+  width: 100%;
+  clear: both;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#colophon {
+  padding-bottom: 3em;
+  text-align: center;
+  width: 100%;
+  #copyright {
+    //padding-top: 2em;
+    clear: both;
+    span {
+      display: block;
+    }
+  }
+}
+
+/* Fade Effects */
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 300ms;
+  -moz-animation-delay: 300ms;
+  animation-delay: 300ms;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 800ms;
+  -moz-animation-delay: 800ms;
+  animation-delay: 800ms;
+}
+
+.fade-in.three {
+  -webkit-animation-delay: 1000ms;
+  -moz-animation-delay: 1000ms;
+  animation-delay: 1000ms;
+}

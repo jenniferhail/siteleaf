@@ -1,0 +1,27 @@
+{% capture content %}
+  {% for article in posts %}
+    {% assign year = article.date | date: "%Y" %}
+
+    {% if year != prev_year %}
+      {% if prev_year %}
+          </ul>
+        </section>
+      {% endif %}
+
+        <section class="list-section">
+          <h3>{{ year }}</h3>
+          <ul class="vertical-list">
+    {% endif %}
+
+    <li class="vertical-listing">
+      <a href="{{ article.url }}">{{ article.title }}</a>
+    </li>
+
+    {% assign prev_year = year %}
+  {% endfor %}
+    </ul>
+  </section>
+
+{% endcapture %}
+
+{% include "layouts/default" %}

@@ -1,0 +1,51 @@
+/* BASE VARIABLES
+ *******************/
+
+$opacity: 0.6;
+
+/* Fonts */
+
+$serif: "adobe-garamond-pro", serif;
+$sans-serif: "open-sans", sans-serif;
+
+$primary: $sans-serif;
+$secondary: $serif;
+
+/* Colors */
+
+$softblack: #4d4d4d;
+$darkblack: #3f3f3f;
+$black: #000;
+
+$palegrey: #f5f5f5;
+$lightgrey: #e4e4e4;
+
+$grey: #EFEAEA;
+
+$white: #fff;
+$cream: #f8f1e9;
+
+$greyblue: #4a4d59;
+$blue: #384657;
+
+$text: $softblack;
+
+/* Borders */
+
+$border: 1px solid $lightgrey;
+$border-2: 2px solid $blue;
+$border-white: 1px solid $white;
+
+/* Susy */
+
+$susy: (
+	columns: 12, // The number of columns in your gird
+	gutters: 1/2, // The size of a gutter in relation to a single column
+	math: fluid,
+	gutter-position: inside,
+	global-box-sizing: border-box
+);
+$center: span(10 at 2 of 12 center);
+
+/* Bourbon Neat */
+$default-layout-direction: LTR !default;

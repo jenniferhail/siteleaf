@@ -1,0 +1,15 @@
+{% capture content %}
+
+<div class="snapshot">
+	<img src="{{ meta.snapshot }}" alt="Jennifer Hail" />
+</div>
+
+<div class="biography">
+	{{ body }}
+</div>
+
+{% include 'includes/sidebar' %}
+
+{% endcapture %}
+
+{% include "layouts/default" %}
